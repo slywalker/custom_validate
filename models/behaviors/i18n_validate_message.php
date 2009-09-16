@@ -167,7 +167,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 				}
 
 				if($this->settings[$model->alias]['fieldName'] && !empty($errorMessage)) {
-					$model->validate[$fieldName][$index]['message'] = __($fieldName, true) . ': ' . $errorMessage;
+					$model->validate[$fieldName][$index]['message'] = __(Inflector::humanize($fieldName), true) . ': ' . $errorMessage;
 				}
 			}
 		}
