@@ -30,7 +30,7 @@ class AttachBehavior extends ModelBehavior {
 	 * @return void
 	 */
 	public function setup(&$model, $config = array()){
-		$model->Behaviors->attach('CustomValidate.AddValidateRule');
+		$model->Behaviors->attach('CustomValidate.AddValidateRule', $config);
 		$model->Behaviors->attach('CustomValidate.I18nValidateMessage', $config);
 	}
 }

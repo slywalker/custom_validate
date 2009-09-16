@@ -7,9 +7,16 @@ In AppModel
 		var $actsAs = array('CustomValidate.Attach');
 	}
 
-If you want to concatenate field name with each error messages, set true on "withFieldName" option.
+AttachBehavior attaches AddValidateRuleBehavior and I18nValidateMessageBehavior
+
+
+If you want to concatenate field name with each error messages, set true on "fieldName" option.
 
 	var $actsAs = array('CustomValidate.Attach' => array('fieldName' => true));
+
+If you want to change encoding, set encode on "encoding" option.
+
+	var $actsAs = array('CustomValidate.Attach' => array('encoding' => 'EUC-JP'));
 
 If you want to set error messages in each model
 
