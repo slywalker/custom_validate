@@ -19,7 +19,7 @@
  * If you want to set error messages in each model
  *
  *	class Post extends AppModel {
- *		function setvalidateMessages() {
+ *		function setValidateMessages() {
  *			$validateMessages = array(
  *				'invalid_email' => __('Invalid Email !!!.', true),
  *			);

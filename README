@@ -14,7 +14,7 @@ If you want to concatenate field name with each error messages, set true on "wit
 If you want to set error messages in each model
 
 	class Post extends AppModel {
-		function setvalidateMessages() {
+		function setValidateMessages() {
 			$validateMessages = array(
 				'invalid_email' => __('Invalid Email !!!.', true),
 			);
