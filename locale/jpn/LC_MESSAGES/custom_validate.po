@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cakeplus\n"
+"POT-Creation-Date: 2009-09-16 16:10+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Yasuo Harada <slywalker.net@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Japanese\n"
+"X-Poedit-Country: JAPAN\n"
+
+#: /models/behaviors/i18n_validate_message.php:55;62
+msgid "Please be sure to input."
+msgstr "必須項目です"
+
+#: /models/behaviors/i18n_validate_message.php:56;63
+msgid "Invalid Email address."
+msgstr "無効なメールアドレスです"
+
+#: /models/behaviors/i18n_validate_message.php:57
+msgid "Between %1$d and %2$d characters."
+msgstr "%1$d文字以上、%2$d文字以下で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:58
+msgid "This field needs url format."
+msgstr "URL形式で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:59
+msgid "%1$d characters or less."
+msgstr "%1$d文字以下で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:60
+msgid "%1$d characters or more."
+msgstr "%1$d文字以上で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:61
+msgid "Please be unique."
+msgstr "既に登録されています"
+
+#: /models/behaviors/i18n_validate_message.php:64
+msgid "Please be number of characters in English."
+msgstr "半角英数で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:65
+msgid "This field needs phone number format."
+msgstr "00-0000-0000（ハイフン区切り）半角で入力してください"
+
