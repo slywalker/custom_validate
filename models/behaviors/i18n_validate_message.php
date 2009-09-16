@@ -50,24 +50,26 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 	 *
 	 * @return array
 	 */
-	private function __getDefaultMessages() {
+	private function __getDefaultMessages(&$model) {
+		$domain = $this->settings[$model->alias]['domain'];
 		//Write Default Error Message
 		$default = array(
-			'require' => __d('custom_validate', 'Please be sure to input.', true),
-			'email_invalid' => __d('custom_validate', 'Invalid Email address.', true),
-			'between' => __d('custom_validate', 'Between %1$d and %2$d characters.', true),
-			'url' => __d('custom_validate', 'This field needs url format.', true),
-			'maxLength' => __d('custom_validate', '%1$d characters or less.', true),
-			'minLength' => __d('custom_validate', '%1$d characters or more.', true),
-			'isUnique' => __d('custom_validate', 'Please be unique.', true),
-			'notEmpty' => __d('custom_validate', 'Please be sure to input.', true),
-			'email' => __d('custom_validate', 'Invalid Email address.', true),
-			'alphaNumeric' => __d('custom_validate', 'Please be number of characters in English.', true),
-			'phone' => __d('custom_validate', 'This field needs phone number format.', true),
-			'checkCompare' => __d('custom_validate', 'This field needs phone number format.', true),
-			'maxMbLength' => __d('custom_validate', '%1$d characters or less.', true),
-			'minMbLength' => __d('custom_validate', '%1$d characters or more.', true),
-			'hiragana' => __d('custom_validate', 'Please input Hiragana.', true),
+			'require' => __d($domain, 'Please be sure to input.', true),
+			'email_invalid' => __d($domain, 'Invalid Email address.', true),
+			'between' => __d($domain, 'Between %1$d and %2$d characters.', true),
+			'url' => __d($domain, 'This field needs url format.', true),
+			'maxLength' => __d($domain, '%1$d characters or less.', true),
+			'minLength' => __d($domain, '%1$d characters or more.', true),
+			'isUnique' => __d($domain, 'Please be unique.', true),
+			'notEmpty' => __d($domain, 'Please be sure to input.', true),
+			'email' => __d($domain, 'Invalid Email address.', true),
+			'alphaNumeric' => __d($domain, 'Please be number of characters in English.', true),
+			// AddValidateRule
+			'phone' => __d($domain, 'This field needs phone number format.', true),
+			'checkCompare' => __d($domain, 'This field needs phone number format.', true),
+			'maxMbLength' => __d($domain, '%1$d characters or less.', true),
+			'minMbLength' => __d($domain, '%1$d characters or more.', true),
+			'hiragana' => __d($domain, 'Please input Hiragana.', true),
 		);
 
 		return $default;
@@ -92,8 +94,11 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 	 * @return void
 	 */
 	public function setup(&$model, $config = array()) {
-		$defalut = array('fieldName' => false);
-		$config = array_merge($defalut, $config);
+		$default = array(
+			'domain' => 'custom_validate',
+			'fieldName' => false,
+		);
+		$config = array_merge($default, $config);
 		$this->settings[$model->alias] = $config;
 	}
 
@@ -104,7 +109,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 	 * @return boolean
 	 */
 	public function beforeValidate(&$model) {
-		$defaultMessages = $this->__getDefaultMessages();
+		$defaultMessages = $this->__getDefaultMessages($model);
 		$validateMessages = $model->setValidateMessages();
 		$this->messages = array_merge($defaultMessages, $validateMessages);
 		

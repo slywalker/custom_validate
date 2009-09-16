@@ -18,6 +18,11 @@ If you want to change encoding, set encode on "encoding" option.
 
 	var $actsAs = array('CustomValidate.Attach' => array('encoding' => 'EUC-JP'));
 
+If you want to change message, copy "custom_validate.po" to /app/locale/jpn/LC_MESSAGES/,
+and rename example "app_custom_validate.po", set domain on "domain" option.
+
+	var $actsAs = array('CustomValidate.Attach' => array('domain' => 'app_custom_validate'));
+
 If you want to set error messages in each model
 
 	class Post extends AppModel {
