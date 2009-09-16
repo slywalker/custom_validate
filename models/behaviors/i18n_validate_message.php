@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Thanks
+ * Thanks ichikaway/cakeplus http://github.com/ichikaway/cakeplus
  * 
  * ------- Usage ----------------------
  * In AppModel
