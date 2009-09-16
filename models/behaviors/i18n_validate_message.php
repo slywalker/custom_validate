@@ -13,7 +13,7 @@
  *
  * If you want to concatenate field name with each error messages, set true on "withFieldName" option.
  *
- *   var $actsAs = array('CustomValidate.I18nValidateMessage' => array('withFieldName' => true));
+ *   var $actsAs = array('CustomValidate.I18nValidateMessage' => array('fieldName' => true));
  *
  *
  * If you want to set error messages in each model
@@ -64,8 +64,6 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 			'email' => __d('custom_validate', 'Invalid Email address.', true),
 			'alphaNumeric' => __d('custom_validate', 'Please be number of characters in English.', true),
 			'phone' => __d('custom_validate', 'This field needs phone number format.', true),
-			
-			// add_validate_rule
 			'checkCompare' => __d('custom_validate', 'This field needs phone number format.', true),
 			'maxMbLength' => __d('custom_validate', '%1$d characters or less.', true),
 			'minMbLength' => __d('custom_validate', '%1$d characters or more.', true),
@@ -94,7 +92,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 	 * @return void
 	 */
 	public function setup(&$model, $config = array()) {
-		$defalut = array('withFieldName' => false);
+		$defalut = array('fieldName' => false);
 		$config = array_merge($defalut, $config);
 		$this->settings[$model->alias] = $config;
 	}
@@ -163,7 +161,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 					$model->validate[$fieldName][$index]['message'] = $model->validate[$fieldName][$index]['message'];
 				}
 
-				if($this->settings[$model->alias]['withFieldName'] && !empty($errorMessage)) {
+				if($this->settings[$model->alias]['fieldName'] && !empty($errorMessage)) {
 					$model->validate[$fieldName][$index]['message'] = __($fieldName, true) . ': ' . $errorMessage;
 				}
 			}
