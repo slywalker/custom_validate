@@ -64,6 +64,12 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 			'email' => __d('custom_validate', 'Invalid Email address.', true),
 			'alphaNumeric' => __d('custom_validate', 'Please be number of characters in English.', true),
 			'phone' => __d('custom_validate', 'This field needs phone number format.', true),
+			
+			// add_validate_rule
+			'checkCompare' => __d('custom_validate', 'This field needs phone number format.', true),
+			'maxMbLength' => __d('custom_validate', '%1$d characters or less.', true),
+			'minMbLength' => __d('custom_validate', '%1$d characters or more.', true),
+			'hiragana' => __d('custom_validate', 'Please input Hiragana.', true),
 		);
 
 		return $default;
