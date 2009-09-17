@@ -51,7 +51,8 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 	 * @return array
 	 */
 	private function __getDefaultMessages($domain) {
-		//Write Default Error Message
+		// Write Default Error Message
+		// cake i18n で取得できるように __('message', true) の形式で書く
 		$messages = array(
 			'alphaNumeric' => __('Please be number of characters in English.', true),
 			'between' => __('Between %1$d and %2$d characters.', true),
@@ -91,6 +92,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 		}
 		$results = array();
 		foreach ($messages as $type => $msg) {
+			// domainを指定して対訳を取得する
 			$results[$type] = I18n::translate($msg, null, $domain);
 		}
 		return $results;
