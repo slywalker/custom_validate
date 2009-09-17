@@ -72,7 +72,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 			'minLength' => __('This field must be at least %1$d characters long.', true),
 			'maxLength' => __('This field must be no larger than %1$d characters long.', true),
 			'money' => __('Please supply a valid monetary amount.', true),
-			'multiple' => __('Please select %2$d to %3$d options', true),
+			'multiple' => __('Please select %1$d to %2$d options', true),
 			'inList' => __('Enter either list.', true),
 			'numeric' => __('Please supply a number.', true),
 			'notEmpty' => __('This field cannot be left blank.', true),
@@ -158,6 +158,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 			}
 
 			foreach ($ruleSet as $index => $validator) {
+				//debug($validator);
 				if (!is_array($validator)) {
 					$validator = array('rule' => $validator);
 				}
@@ -183,6 +184,10 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 				$errorMessage = (array_key_exists($rule, $messages) ? $messages[$rule] : null);
 
 				if (!empty($errorMessage)) {
+					if ($rule === 'multiple') {
+						//debug($ruleParams);
+						$ruleParams = array($ruleParams[0]['min'], $ruleParams[0]['max']);
+					}
 					$errorMessage = vsprintf($errorMessage, $ruleParams);
 				}
 				elseif (!empty($model->validate[$fieldName][$index]['message'])) {
@@ -192,7 +197,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 				if($this->settings[$model->alias]['fieldName'] && !empty($errorMessage)) {
 					$errorMessage = __(Inflector::humanize($fieldName), true) . ': ' . $errorMessage;
 				}
-				
+				//debug($model->validate);
 				$model->validate[$fieldName][$index]['message'] = $errorMessage;
 			}
 		}

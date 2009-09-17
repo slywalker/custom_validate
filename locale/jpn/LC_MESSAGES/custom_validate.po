@@ -60,8 +60,8 @@ msgid "Please supply a valid monetary amount."
 msgstr "金額を半角数字で入力してください"
 
 #: /models/behaviors/i18n_validate_message.php:75
-msgid "Please select %2$d to %3$d options"
-msgstr "%2$d個から%3$d個まで選択してください"
+msgid "Please select %1$d to %2$d options"
+msgstr "%1$d個から%2$d個まで選択してください"
 
 #: /models/behaviors/i18n_validate_message.php:76
 msgid "Enter either list."
