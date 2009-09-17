@@ -48,6 +48,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 	 * Define default validation error messages
 	 * $default_error_messages can include gettext __() value.
 	 *
+	 * @param string $domain
 	 * @return array
 	 */
 	private function __getDefaultMessages($domain) {
