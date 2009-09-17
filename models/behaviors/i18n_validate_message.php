@@ -122,6 +122,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 		$default = array(
 			'domain' => 'custom_validate',
 			'fieldName' => false,
+			'separator' => ': ',
 		);
 		$config = array_merge($default, $config);
 		$this->settings[$model->alias] = $config;
@@ -199,7 +200,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 				}
 
 				if($this->settings[$model->alias]['fieldName'] && !empty($errorMessage)) {
-					$errorMessage = I18n::translate(Inflector::humanize($fieldName)) . ': ' . $errorMessage;
+					$errorMessage = I18n::translate(Inflector::humanize($fieldName)) . $this->settings[$model->alias]['separator'] . $errorMessage;
 				}
 				//debug($model->validate);
 				$model->validate[$fieldName][$index]['message'] = $errorMessage;
