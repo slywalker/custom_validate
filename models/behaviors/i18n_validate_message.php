@@ -50,8 +50,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 	 *
 	 * @return array
 	 */
-	private function __getDefaultMessages(&$model) {
-		$domain = $this->settings[$model->alias]['domain'];
+	private function __getDefaultMessages($domain) {
 		//Write Default Error Message
 		$default = array(
 			'require' => __d($domain, 'Please be sure to input.', true),
@@ -109,7 +108,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 	 * @return boolean
 	 */
 	public function beforeValidate(&$model) {
-		$defaultMessages = $this->__getDefaultMessages($model);
+		$defaultMessages = $this->__getDefaultMessages($this->settings[$model->alias]['domain']);
 		$validateMessages = $model->setValidateMessages();
 		$this->messages = array_merge($defaultMessages, $validateMessages);
 		
