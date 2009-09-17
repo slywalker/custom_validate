@@ -84,7 +84,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 			// AddValidateRule
 			'checkCompare' => __('Incorrect value.', true),
 			'minMbLength' => __('This field must be at least %1$d characters long.', true),
-			'maxMbLength' => __('This field must be no larger than %1$d characters long.', true),
+			'maxMbLength' => __d($domain, 'This field must be no larger than %1$d characters long.', true),
 			'hiragana' => __('Please input Hiragana.', true),
 		);
 
@@ -183,16 +183,17 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 				$errorMessage = (array_key_exists($rule, $messages) ? $messages[$rule] : null);
 
 				if (!empty($errorMessage)) {
-					$model->validate[$fieldName][$index]['message'] = vsprintf($errorMessage, $ruleParams);
-
+					$errorMessage = vsprintf($errorMessage, $ruleParams);
 				}
 				elseif (!empty($model->validate[$fieldName][$index]['message'])) {
-					$model->validate[$fieldName][$index]['message'] = $model->validate[$fieldName][$index]['message'];
+					$errorMessage = $model->validate[$fieldName][$index]['message'];
 				}
 
 				if($this->settings[$model->alias]['fieldName'] && !empty($errorMessage)) {
-					$model->validate[$fieldName][$index]['message'] = __(Inflector::humanize($fieldName), true) . ': ' . $errorMessage;
+					$errorMessage = __(Inflector::humanize($fieldName), true) . ': ' . $errorMessage;
 				}
+				
+				$model->validate[$fieldName][$index]['message'] = $errorMessage;
 			}
 		}
 	}
