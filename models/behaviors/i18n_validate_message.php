@@ -64,7 +64,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 			'date' => __('Enter a valid date in YY-MM-DD format.', true),
 			'decimal' => __('Incorrect value.', true),
 			'email' => __('Please supply a valid email address.', true),
-			'equalTo' => __('This value must be the string %1$d.', true),
+			'equalTo' => __('This value must be the string %1$s.', true),
 			//'extension' => __('Please supply a valid image.', true),
 			//'file' => __('Please be sure to input.', true),
 			'ip' => __('Please supply a valid IP address.', true),
