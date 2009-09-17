@@ -52,26 +52,48 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 	 */
 	private function __getDefaultMessages($domain) {
 		//Write Default Error Message
-		$default = array(
-			'require' => __d($domain, 'Please be sure to input.', true),
-			'email_invalid' => __d($domain, 'Invalid Email address.', true),
-			'between' => __d($domain, 'Between %1$d and %2$d characters.', true),
-			'url' => __d($domain, 'This field needs url format.', true),
-			'maxLength' => __d($domain, '%1$d characters or less.', true),
-			'minLength' => __d($domain, '%1$d characters or more.', true),
-			'isUnique' => __d($domain, 'Please be unique.', true),
-			'notEmpty' => __d($domain, 'Please be sure to input.', true),
-			'email' => __d($domain, 'Invalid Email address.', true),
-			'alphaNumeric' => __d($domain, 'Please be number of characters in English.', true),
+		$messages = array(
+			'alphaNumeric' => __('Please be number of characters in English.', true),
+			'between' => __('Between %1$d and %2$d characters.', true),
+			'blank' => __('This field needs blank.', true),
+			'boolean' => __('This field needs boolean.', true),
+			'cc' => __('This field needs cc format.', true),
+			//'comparison' => __('%1$d %2$d.', true),
+			'date' => __('This field needs date format.', true),
+			'decimal' => __('This field needs decimal format.', true),
+			'email' => __('Invalid Email address.', true),
+			'equalTo' => __('This field must be equal to %1$d.', true),
+			'extension' => __('Please be sure to input.', true),
+			//'file' => __('Please be sure to input.', true),
+			'ip' => __('This field needs IP format.', true),
+			'isUnique' => __('Please be unique.', true),
+			'minLength' => __('%1$d characters or more.', true),
+			'maxLength' => __('%1$d characters or less.', true),
+			'money' => __('This field needs money format.', true),
+			'multiple' => __('Please be sure to input.', true),
+			'inList' => __('This field must be in list.', true),
+			'numeric' => __('This field needs numeric.', true),
+			'notEmpty' => __('Please be sure to input.', true),
+			'phone' => __('This field needs phone format.', true),
+			'postal' => __('This field needs postal format.', true),
+			'range' => __('This field needs form %1$d to %2$d.', true),
+			'ssn' => __('This field needs ssn format.', true),
+			'url' => __('This field needs url format.', true),
 			// AddValidateRule
-			'phone' => __d($domain, 'This field needs phone number format.', true),
-			'checkCompare' => __d($domain, 'This field needs phone number format.', true),
-			'maxMbLength' => __d($domain, '%1$d characters or less.', true),
-			'minMbLength' => __d($domain, '%1$d characters or more.', true),
-			'hiragana' => __d($domain, 'Please input Hiragana.', true),
+			'checkCompare' => __('This field needs phone number format.', true),
+			'maxMbLength' => __('%1$d characters or less.', true),
+			'minMbLength' => __('%1$d characters or more.', true),
+			'hiragana' => __('Please input Hiragana.', true),
 		);
 
-		return $default;
+		if (!class_exists('I18n')) {
+			App::import('Core', 'i18n');
+		}
+		$results = array();
+		foreach ($messages as $type => $msg) {
+			$results[$type] = I18n::translate($msg, null, $domain);
+		}
+		return $results;
 	}
 
 	/**

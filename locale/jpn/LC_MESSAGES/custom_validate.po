@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cakeplus\n"
-"POT-Creation-Date: 2009-09-16 17:47+0900\n"
+"POT-Creation-Date: 2009-09-17 10:43+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Yasuo Harada <slywalker.net@gmail.com>\n"
 "Language-Team: \n"
@@ -11,43 +11,99 @@ msgstr ""
 "X-Poedit-Language: Japanese\n"
 "X-Poedit-Country: JAPAN\n"
 
-#: /models/behaviors/i18n_validate_message.php:56;63
-msgid "Please be sure to input."
-msgstr "必須項目です"
-
-#: /models/behaviors/i18n_validate_message.php:57;64
-msgid "Invalid Email address."
-msgstr "無効なメールアドレスです"
-
-#: /models/behaviors/i18n_validate_message.php:58
-msgid "Between %1$d and %2$d characters."
-msgstr "%1$d文字以上、%2$d文字以下で入力してください"
-
-#: /models/behaviors/i18n_validate_message.php:59
-msgid "This field needs url format."
-msgstr "URL形式で入力してください"
-
-#: /models/behaviors/i18n_validate_message.php:60;70
-msgid "%1$d characters or less."
-msgstr "%1$d文字以下で入力してください"
-
-#: /models/behaviors/i18n_validate_message.php:61;71
-msgid "%1$d characters or more."
-msgstr "%1$d文字以上で入力してください"
-
-#: /models/behaviors/i18n_validate_message.php:62
-msgid "Please be unique."
-msgstr "既に登録されています"
-
-#: /models/behaviors/i18n_validate_message.php:65
+#: /models/behaviors/i18n_validate_message.php:56
 msgid "Please be number of characters in English."
 msgstr "半角英数で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:66;69
+#: /models/behaviors/i18n_validate_message.php:57
+msgid "Between %1$d and %2$d characters."
+msgstr "%1$d文字以上、%2$d文字以下で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:58
+msgid "This field needs blank."
+msgstr "空白でなければいけません"
+
+#: /models/behaviors/i18n_validate_message.php:59
+msgid "This field needs boolean."
+msgstr "不正な入力です"
+
+#: /models/behaviors/i18n_validate_message.php:60
+msgid "This field needs cc format."
+msgstr "クレジットカード番号形式で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:62
+msgid "This field needs date format."
+msgstr "日付形式で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:63
+msgid "This field needs decimal format."
+msgstr "小数で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:64
+msgid "Invalid Email address."
+msgstr "無効なメールアドレスです"
+
+#: /models/behaviors/i18n_validate_message.php:65
+msgid "This field must be equal to %1$d."
+msgstr "%1$d と一致していません"
+
+#: /models/behaviors/i18n_validate_message.php:66;73;76
+msgid "Please be sure to input."
+msgstr "必須項目です"
+
+#: /models/behaviors/i18n_validate_message.php:68
+msgid "This field needs IP format."
+msgstr "IP形式で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:69
+msgid "Please be unique."
+msgstr "既に登録されています"
+
+#: /models/behaviors/i18n_validate_message.php:70;85
+msgid "%1$d characters or more."
+msgstr "%1$d文字以上で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:71;84
+msgid "%1$d characters or less."
+msgstr "%1$d文字以下で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:72
+msgid "This field needs money format."
+msgstr "金額形式で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:74
+msgid "This field must be in list."
+msgstr "リスト中にありません"
+
+#: /models/behaviors/i18n_validate_message.php:75
+msgid "This field needs numeric."
+msgstr "半角数字で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:77
+msgid "This field needs phone format."
+msgstr "00-0000-0000（ハイフン区切り）半角で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:78
+msgid "This field needs postal format."
+msgstr "郵便番号形式で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:79
+msgid "This field needs form %1$d to %2$d."
+msgstr "%1$d から %2$d までで入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:80
+msgid "This field needs ssn format."
+msgstr "SSN形式で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:81
+msgid "This field needs url format."
+msgstr "URL形式で入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:83
 msgid "This field needs phone number format."
 msgstr "00-0000-0000（ハイフン区切り）半角で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:72
+#: /models/behaviors/i18n_validate_message.php:86
 msgid "Please input Hiragana."
 msgstr "ひらがなで入力してください"
 
