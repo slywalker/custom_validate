@@ -64,7 +64,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 			'decimal' => __('This field needs decimal format.', true),
 			'email' => __('Invalid Email address.', true),
 			'equalTo' => __('This field must be equal to %1$d.', true),
-			'extension' => __('Please be sure to input.', true),
+			//'extension' => __('Please be sure to input.', true),
 			//'file' => __('Please be sure to input.', true),
 			'ip' => __('This field needs IP format.', true),
 			'isUnique' => __('Please be unique.', true),
