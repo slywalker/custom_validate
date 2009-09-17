@@ -28,6 +28,10 @@
  *	}
  * ---------------------------------------
  */
+if (!class_exists('I18n')) {
+	App::import('Core', 'i18n');
+}
+
 class I18nValidateMessageBehavior extends ModelBehavior {
 	
 	/**
@@ -82,15 +86,12 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 			'ssn' => __('Please supply a valid social security number.', true),
 			'url' => __('Please supply a valid URL address.', true),
 			// AddValidateRule
-			'checkCompare' => __('Incorrect value.', true),
+			'checkCompare' => __('This value must be equal to %1$s.', true),
 			'minMbLength' => __('This field must be at least %1$d characters long.', true),
 			'maxMbLength' => __d($domain, 'This field must be no larger than %1$d characters long.', true),
 			'hiragana' => __('Please input Hiragana.', true),
 		);
 
-		if (!class_exists('I18n')) {
-			App::import('Core', 'i18n');
-		}
 		$results = array();
 		foreach ($messages as $type => $msg) {
 			// domainを指定して対訳を取得する
@@ -188,6 +189,9 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 						//debug($ruleParams);
 						$ruleParams = array($ruleParams[0]['min'], $ruleParams[0]['max']);
 					}
+					if ($rule === 'checkCompare') {
+						$ruleParams = array(I18n::translate(Inflector::humanize($fieldName.$ruleParams[0])));
+					}
 					$errorMessage = vsprintf($errorMessage, $ruleParams);
 				}
 				elseif (!empty($model->validate[$fieldName][$index]['message'])) {
@@ -195,7 +199,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 				}
 
 				if($this->settings[$model->alias]['fieldName'] && !empty($errorMessage)) {
-					$errorMessage = __(Inflector::humanize($fieldName), true) . ': ' . $errorMessage;
+					$errorMessage = I18n::translate(Inflector::humanize($fieldName)) . ': ' . $errorMessage;
 				}
 				//debug($model->validate);
 				$model->validate[$fieldName][$index]['message'] = $errorMessage;
