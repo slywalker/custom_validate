@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cakeplus\n"
-"POT-Creation-Date: 2009-09-17 10:43+0900\n"
+"POT-Creation-Date: 2009-09-17 11:13+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Yasuo Harada <slywalker.net@gmail.com>\n"
 "Language-Team: \n"
@@ -11,99 +11,126 @@ msgstr ""
 "X-Poedit-Language: Japanese\n"
 "X-Poedit-Country: JAPAN\n"
 
-#: /models/behaviors/i18n_validate_message.php:56
-msgid "Please be number of characters in English."
+#: /models/behaviors/i18n_validate_message.php:58
+msgid "This field must only contain letters and numbers."
 msgstr "半角英数で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:57
-msgid "Between %1$d and %2$d characters."
+#: /models/behaviors/i18n_validate_message.php:59
+msgid "This field must be between %1$d and %2$d characters long."
 msgstr "%1$d文字以上、%2$d文字以下で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:58
-msgid "This field needs blank."
-msgstr "空白でなければいけません"
-
-#: /models/behaviors/i18n_validate_message.php:59
-msgid "This field needs boolean."
-msgstr "不正な入力です"
-
-#: /models/behaviors/i18n_validate_message.php:60
-msgid "This field needs cc format."
-msgstr "クレジットカード番号形式で入力してください"
+#: /models/behaviors/i18n_validate_message.php:60;61;65;85
+msgid "Incorrect value."
+msgstr "不正な値です"
 
 #: /models/behaviors/i18n_validate_message.php:62
-msgid "This field needs date format."
-msgstr "日付形式で入力してください"
-
-#: /models/behaviors/i18n_validate_message.php:63
-msgid "This field needs decimal format."
-msgstr "小数で入力してください"
+msgid "The credit card number you supplied was invalid."
+msgstr "クレジットカード番号を入力してください"
 
 #: /models/behaviors/i18n_validate_message.php:64
-msgid "Invalid Email address."
-msgstr "無効なメールアドレスです"
+msgid "Enter a valid date in YY-MM-DD format."
+msgstr "2000-01-01形式で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:65
-msgid "This field must be equal to %1$d."
-msgstr "%1$d と一致していません"
+#: /models/behaviors/i18n_validate_message.php:66
+msgid "Please supply a valid email address."
+msgstr "メールアドレスを入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:66;73;76
-msgid "Please be sure to input."
-msgstr "必須項目です"
+#: /models/behaviors/i18n_validate_message.php:67
+msgid "This value must be the string %1$d."
+msgstr "%1$dと一致していません"
 
-#: /models/behaviors/i18n_validate_message.php:68
-msgid "This field needs IP format."
-msgstr "IP形式で入力してください"
+#: /models/behaviors/i18n_validate_message.php:70
+msgid "Please supply a valid IP address."
+msgstr "IPアドレスを入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:69
-msgid "Please be unique."
-msgstr "既に登録されています"
+#: /models/behaviors/i18n_validate_message.php:71
+msgid "This has already been taken."
+msgstr "既に取得されています"
 
-#: /models/behaviors/i18n_validate_message.php:70;85
-msgid "%1$d characters or more."
+#: /models/behaviors/i18n_validate_message.php:72;86
+msgid "This field must be at least %1$d characters long."
 msgstr "%1$d文字以上で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:71;84
-msgid "%1$d characters or less."
-msgstr "%1$d文字以下で入力してください"
-
-#: /models/behaviors/i18n_validate_message.php:72
-msgid "This field needs money format."
-msgstr "金額形式で入力してください"
+#: /models/behaviors/i18n_validate_message.php:73;87
+msgid "This field must be no larger than %1$d characters long."
+msgstr "%1$d以下で入力してください"
 
 #: /models/behaviors/i18n_validate_message.php:74
-msgid "This field must be in list."
-msgstr "リスト中にありません"
+msgid "Please supply a valid monetary amount."
+msgstr "金額を半角数字で入力してください"
 
 #: /models/behaviors/i18n_validate_message.php:75
-msgid "This field needs numeric."
-msgstr "半角数字で入力してください"
+msgid "Please select %2$d to %3$d options"
+msgstr "%2$d個から%3$d個まで選択してください"
+
+#: /models/behaviors/i18n_validate_message.php:76
+msgid "Enter either list."
+msgstr "リスト中から選択してください"
 
 #: /models/behaviors/i18n_validate_message.php:77
-msgid "This field needs phone format."
-msgstr "00-0000-0000（ハイフン区切り）半角で入力してください"
+msgid "Please supply a number."
+msgstr "半角数字で入力してください"
 
 #: /models/behaviors/i18n_validate_message.php:78
-msgid "This field needs postal format."
-msgstr "郵便番号形式で入力してください"
+msgid "This field cannot be left blank."
+msgstr "必須項目です"
 
 #: /models/behaviors/i18n_validate_message.php:79
-msgid "This field needs form %1$d to %2$d."
-msgstr "%1$d から %2$d までで入力してください"
+msgid "Please supply a valid phone number."
+msgstr "電話番号(00-0000-0000)を入力してください"
 
 #: /models/behaviors/i18n_validate_message.php:80
-msgid "This field needs ssn format."
-msgstr "SSN形式で入力してください"
+msgid "Please supply a valid postal number."
+msgstr "郵便番号(000-0000)を入力してください"
 
 #: /models/behaviors/i18n_validate_message.php:81
-msgid "This field needs url format."
-msgstr "URL形式で入力してください"
+msgid "Please enter a number between %1$d and %2$d."
+msgstr "%1$dから%2$dまでの数字を入力してください"
+
+#: /models/behaviors/i18n_validate_message.php:82
+msgid "Please supply a valid social security number."
+msgstr "社会保障番号を入力してください"
 
 #: /models/behaviors/i18n_validate_message.php:83
-msgid "This field needs phone number format."
-msgstr "00-0000-0000（ハイフン区切り）半角で入力してください"
+msgid "Please supply a valid URL address."
+msgstr "URLアドレスを入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:86
+#: /models/behaviors/i18n_validate_message.php:88
 msgid "Please input Hiragana."
 msgstr "ひらがなで入力してください"
+
+#~ msgid "Please be number of characters in English."
+#~ msgstr "半角英数で入力してください"
+#~ msgid "This field needs boolean."
+#~ msgstr "不正な入力です"
+#~ msgid "This field needs cc format."
+#~ msgstr "クレジットカード番号形式で入力してください"
+#~ msgid "This field needs date format."
+#~ msgstr "日付形式で入力してください"
+#~ msgid "This field needs decimal format."
+#~ msgstr "小数で入力してください"
+#~ msgid "Please be sure to input."
+#~ msgstr "必須項目です"
+#~ msgid "This field needs IP format."
+#~ msgstr "IP形式で入力してください"
+#~ msgid "%1$d characters or more."
+#~ msgstr "%1$d文字以上で入力してください"
+#~ msgid "%1$d characters or less."
+#~ msgstr "%1$d文字以下で入力してください"
+#~ msgid "This field needs money format."
+#~ msgstr "金額形式で入力してください"
+#~ msgid "This field needs numeric."
+#~ msgstr "半角数字で入力してください"
+#~ msgid "This field needs phone format."
+#~ msgstr "00-0000-0000（ハイフン区切り）半角で入力してください"
+#~ msgid "This field needs postal format."
+#~ msgstr "郵便番号形式で入力してください"
+#~ msgid "This field needs form %1$d to %2$d."
+#~ msgstr "%1$d から %2$d までで入力してください"
+#~ msgid "This field needs ssn format."
+#~ msgstr "SSN形式で入力してください"
+#~ msgid "This field needs url format."
+#~ msgstr "URL形式で入力してください"
+#~ msgid "This field needs phone number format."
+#~ msgstr "00-0000-0000（ハイフン区切り）半角で入力してください"
 

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2009-09-17 10:43+0900\n"
+"POT-Creation-Date: 2009-09-17 11:13+0900\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -15,99 +15,91 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: /models/behaviors/i18n_validate_message.php:56
-msgid "Please be number of characters in English."
-msgstr ""
-
-#: /models/behaviors/i18n_validate_message.php:57
-msgid "Between %1$d and %2$d characters."
-msgstr ""
-
 #: /models/behaviors/i18n_validate_message.php:58
-msgid "This field needs blank."
+msgid "This field must only contain letters and numbers."
 msgstr ""
 
 #: /models/behaviors/i18n_validate_message.php:59
-msgid "This field needs boolean."
+msgid "This field must be between %1$d and %2$d characters long."
 msgstr ""
 
-#: /models/behaviors/i18n_validate_message.php:60
-msgid "This field needs cc format."
+#: /models/behaviors/i18n_validate_message.php:60;61;65;85
+msgid "Incorrect value."
 msgstr ""
 
 #: /models/behaviors/i18n_validate_message.php:62
-msgid "This field needs date format."
-msgstr ""
-
-#: /models/behaviors/i18n_validate_message.php:63
-msgid "This field needs decimal format."
+msgid "The credit card number you supplied was invalid."
 msgstr ""
 
 #: /models/behaviors/i18n_validate_message.php:64
-msgid "Invalid Email address."
+msgid "Enter a valid date in YY-MM-DD format."
 msgstr ""
 
-#: /models/behaviors/i18n_validate_message.php:65
-msgid "This field must be equal to %1$d."
+#: /models/behaviors/i18n_validate_message.php:66
+msgid "Please supply a valid email address."
 msgstr ""
 
-#: /models/behaviors/i18n_validate_message.php:66;73;76
-msgid "Please be sure to input."
+#: /models/behaviors/i18n_validate_message.php:67
+msgid "This value must be the string %1$d."
 msgstr ""
 
-#: /models/behaviors/i18n_validate_message.php:68
-msgid "This field needs IP format."
+#: /models/behaviors/i18n_validate_message.php:70
+msgid "Please supply a valid IP address."
 msgstr ""
 
-#: /models/behaviors/i18n_validate_message.php:69
-msgid "Please be unique."
+#: /models/behaviors/i18n_validate_message.php:71
+msgid "This has already been taken."
 msgstr ""
 
-#: /models/behaviors/i18n_validate_message.php:70;85
-msgid "%1$d characters or more."
+#: /models/behaviors/i18n_validate_message.php:72;86
+msgid "This field must be at least %1$d characters long."
 msgstr ""
 
-#: /models/behaviors/i18n_validate_message.php:71;84
-msgid "%1$d characters or less."
-msgstr ""
-
-#: /models/behaviors/i18n_validate_message.php:72
-msgid "This field needs money format."
+#: /models/behaviors/i18n_validate_message.php:73;87
+msgid "This field must be no larger than %1$d characters long."
 msgstr ""
 
 #: /models/behaviors/i18n_validate_message.php:74
-msgid "This field must be in list."
+msgid "Please supply a valid monetary amount."
 msgstr ""
 
 #: /models/behaviors/i18n_validate_message.php:75
-msgid "This field needs numeric."
+msgid "Please select %2$d to %3$d options"
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:76
+msgid "Enter either list."
 msgstr ""
 
 #: /models/behaviors/i18n_validate_message.php:77
-msgid "This field needs phone format."
+msgid "Please supply a number."
 msgstr ""
 
 #: /models/behaviors/i18n_validate_message.php:78
-msgid "This field needs postal format."
+msgid "This field cannot be left blank."
 msgstr ""
 
 #: /models/behaviors/i18n_validate_message.php:79
-msgid "This field needs form %1$d to %2$d."
+msgid "Please supply a valid phone number."
 msgstr ""
 
 #: /models/behaviors/i18n_validate_message.php:80
-msgid "This field needs ssn format."
+msgid "Please supply a valid postal number."
 msgstr ""
 
 #: /models/behaviors/i18n_validate_message.php:81
-msgid "This field needs url format."
+msgid "Please enter a number between %1$d and %2$d."
+msgstr ""
+
+#: /models/behaviors/i18n_validate_message.php:82
+msgid "Please supply a valid social security number."
 msgstr ""
 
 #: /models/behaviors/i18n_validate_message.php:83
-msgid "This field needs phone number format."
+msgid "Please supply a valid URL address."
 msgstr ""
 
-#: /models/behaviors/i18n_validate_message.php:86
+#: /models/behaviors/i18n_validate_message.php:88
 msgid "Please input Hiragana."
 msgstr ""
 
