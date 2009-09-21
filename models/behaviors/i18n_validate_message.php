@@ -187,8 +187,15 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 
 				if (!empty($errorMessage)) {
 					if ($rule === 'multiple') {
-						//debug($ruleParams);
-						$ruleParams = array($ruleParams[0]['min'], $ruleParams[0]['max']);
+						$min = null;
+						$max = null;
+						if (isset($ruleParams[0]['min'])) {
+							$min = $ruleParams[0]['min'];
+						}
+						if (isset($ruleParams[0]['max'])) {
+							$min = $ruleParams[0]['max'];
+						}
+						$ruleParams = array($min, $max);
 					}
 					if ($rule === 'checkCompare') {
 						$ruleParams = array(I18n::translate(Inflector::humanize($fieldName.$ruleParams[0])));
