@@ -160,7 +160,6 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 			}
 
 			foreach ($ruleSet as $index => $validator) {
-				//debug($validator);
 				if (!is_array($validator)) {
 					$validator = array('rule' => $validator);
 				}
@@ -193,7 +192,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 							$min = $ruleParams[0]['min'];
 						}
 						if (isset($ruleParams[0]['max'])) {
-							$min = $ruleParams[0]['max'];
+							$max = $ruleParams[0]['max'];
 						}
 						$ruleParams = array($min, $max);
 					}
