@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cakeplus\n"
-"POT-Creation-Date: 2009-09-17 11:13+0900\n"
+"POT-Creation-Date: 2009-11-03 12:01+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Yasuo Harada <slywalker.net@gmail.com>\n"
 "Language-Team: \n"
@@ -11,90 +11,95 @@ msgstr ""
 "X-Poedit-Language: Japanese\n"
 "X-Poedit-Country: JAPAN\n"
 
-#: /models/behaviors/i18n_validate_message.php:58
+#: /models/behaviors/i18n_validate_message.php:62
 msgid "This field must only contain letters and numbers."
 msgstr "半角英数で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:59
+#: /models/behaviors/i18n_validate_message.php:63
 msgid "This field must be between %1$d and %2$d characters long."
 msgstr "%1$d文字以上、%2$d文字以下で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:60;61;65;85
+#: /models/behaviors/i18n_validate_message.php:64;65;69
 msgid "Incorrect value."
 msgstr "不正な値です"
 
-#: /models/behaviors/i18n_validate_message.php:62
+#: /models/behaviors/i18n_validate_message.php:66
 msgid "The credit card number you supplied was invalid."
 msgstr "クレジットカード番号を入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:64
+#: /models/behaviors/i18n_validate_message.php:68
 msgid "Enter a valid date in YY-MM-DD format."
 msgstr "2000-01-01形式で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:66
+#: /models/behaviors/i18n_validate_message.php:70
 msgid "Please supply a valid email address."
 msgstr "メールアドレスを入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:67
-msgid "This value must be the string %1$d."
-msgstr "%1$dと一致していません"
+#: /models/behaviors/i18n_validate_message.php:71
+msgid "This value must be the string %1$s."
+msgstr "値が%1$sである必要があります"
 
-#: /models/behaviors/i18n_validate_message.php:70
+#: /models/behaviors/i18n_validate_message.php:74
 msgid "Please supply a valid IP address."
 msgstr "IPアドレスを入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:71
+#: /models/behaviors/i18n_validate_message.php:75
 msgid "This has already been taken."
 msgstr "既に取得されています"
 
-#: /models/behaviors/i18n_validate_message.php:72;86
+#: /models/behaviors/i18n_validate_message.php:76;90
 msgid "This field must be at least %1$d characters long."
 msgstr "%1$d文字以上で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:73;87
+#: /models/behaviors/i18n_validate_message.php:77;91
 msgid "This field must be no larger than %1$d characters long."
 msgstr "%1$d文字以下で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:74
+#: /models/behaviors/i18n_validate_message.php:78
 msgid "Please supply a valid monetary amount."
 msgstr "金額を半角数字で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:75
+#: /models/behaviors/i18n_validate_message.php:79
 msgid "Please select %1$d to %2$d options"
 msgstr "%1$d個から%2$d個まで選択してください"
 
-#: /models/behaviors/i18n_validate_message.php:76
+#: /models/behaviors/i18n_validate_message.php:80
 msgid "Enter either list."
 msgstr "リスト中から選択してください"
 
-#: /models/behaviors/i18n_validate_message.php:77
+#: /models/behaviors/i18n_validate_message.php:81
 msgid "Please supply a number."
 msgstr "半角数字で入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:78
+#: /models/behaviors/i18n_validate_message.php:82
 msgid "This field cannot be left blank."
 msgstr "必須項目です"
 
-#: /models/behaviors/i18n_validate_message.php:79
+#: /models/behaviors/i18n_validate_message.php:83
 msgid "Please supply a valid phone number."
 msgstr "電話番号(00-0000-0000)を入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:80
+#: /models/behaviors/i18n_validate_message.php:84
 msgid "Please supply a valid postal number."
 msgstr "郵便番号(000-0000)を入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:81
+#: /models/behaviors/i18n_validate_message.php:85
 msgid "Please enter a number between %1$d and %2$d."
 msgstr "%1$dから%2$dまでの数字を入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:82
+#: /models/behaviors/i18n_validate_message.php:86
 msgid "Please supply a valid social security number."
 msgstr "社会保障番号を入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:83
+#: /models/behaviors/i18n_validate_message.php:87
 msgid "Please supply a valid URL address."
 msgstr "URLアドレスを入力してください"
 
-#: /models/behaviors/i18n_validate_message.php:88
+#: /models/behaviors/i18n_validate_message.php:89
+msgid "This value must be equal to %1$s."
+msgstr "%1$sと内容が一致していません"
+
+#: /models/behaviors/i18n_validate_message.php:92
 msgid "Please input Hiragana."
 msgstr "ひらがなで入力してください"
+

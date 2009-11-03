@@ -88,7 +88,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 			// AddValidateRule
 			'checkCompare' => __('This value must be equal to %1$s.', true),
 			'minMbLength' => __('This field must be at least %1$d characters long.', true),
-			'maxMbLength' => __d($domain, 'This field must be no larger than %1$d characters long.', true),
+			'maxMbLength' => __('This field must be no larger than %1$d characters long.', true),
 			'hiragana' => __('Please input Hiragana.', true),
 		);
 
@@ -197,6 +197,7 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 						$ruleParams = array($min, $max);
 					}
 					if ($rule === 'checkCompare') {
+						debug(I18n::translate(Inflector::humanize($fieldName.$ruleParams[0])));
 						$ruleParams = array(I18n::translate(Inflector::humanize($fieldName.$ruleParams[0])));
 					}
 					$errorMessage = vsprintf($errorMessage, $ruleParams);
