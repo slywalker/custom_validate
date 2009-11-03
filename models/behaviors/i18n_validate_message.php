@@ -197,7 +197,6 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 						$ruleParams = array($min, $max);
 					}
 					if ($rule === 'checkCompare') {
-						debug(I18n::translate(Inflector::humanize($fieldName.$ruleParams[0])));
 						$ruleParams = array(I18n::translate(Inflector::humanize($fieldName.$ruleParams[0])));
 					}
 					$errorMessage = vsprintf($errorMessage, $ruleParams);
@@ -209,7 +208,6 @@ class I18nValidateMessageBehavior extends ModelBehavior {
 				if($this->settings[$model->alias]['fieldName'] && !empty($errorMessage)) {
 					$errorMessage = I18n::translate(Inflector::humanize($fieldName)) . $this->settings[$model->alias]['separator'] . $errorMessage;
 				}
-				//debug($model->validate);
 				$model->validate[$fieldName][$index]['message'] = $errorMessage;
 			}
 		}
